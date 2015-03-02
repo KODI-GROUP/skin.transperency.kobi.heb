@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<onload condition="Skin.HasSetting(Use_Startup_Playlist)">PlayMedia("$INFO[Skin.String(Startup_Playlist_Path)]")</onload>
+	<onload condition="Skin.HasSetting(Vis-ArtistSlide)">RunScript(script.artistslideshow,daemon=True)</onload>
+	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<onload>RunScript(script.skin.info.service)</onload>
+	<onload>RunScript(script.randomandlastitems,Type=Movie,playlist=special://profile/playlists/video/Tomer.xsp,method=Last,limit=10,property=smart1)</onload>
+</window>
